@@ -16,8 +16,34 @@ const ANCSection = () => {
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content - mobile first */}
-          <div className="space-y-8">
+          {/* Image */}
+          <div className="relative order-2 lg:order-1">
+            <div className="relative">
+              {/* Sound waves decoration */}
+              <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-32 h-64 opacity-30">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 border-l-2 border-primary rounded-l-full"
+                    style={{
+                      width: `${(i + 1) * 20}px`,
+                      height: `${(i + 1) * 40}px`,
+                      opacity: 1 - i * 0.15,
+                      animationDelay: `${i * 200}ms`,
+                    }}
+                  />
+                ))}
+              </div>
+              <img
+                src={ancImage}
+                alt="Tecnologia de Cancelamento de Ruído"
+                className="w-full max-w-lg mx-auto drop-shadow-2xl"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <span className="text-primary font-semibold uppercase tracking-wider text-sm">
                 Tecnologia ANC
@@ -57,32 +83,6 @@ const ANCSection = () => {
               </div>
             </div>
           </div>
-          {/* Image - desktop second */}
-          <div className="relative">
-            <div className="relative">
-              {/* Sound waves decoration */}
-              <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-32 h-64 opacity-30">
-                {[...Array(5)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 border-l-2 border-primary rounded-l-full"
-                    style={{
-                      width: `${(i + 1) * 20}px`,
-                      height: `${(i + 1) * 40}px`,
-                      opacity: 1 - i * 0.15,
-                      animationDelay: `${i * 200}ms`,
-                    }}
-                  />
-                ))}
-              </div>
-              <img
-                src={ancImage}
-                alt="Tecnologia de Cancelamento de Ruído"
-                className="w-full max-w-lg mx-auto drop-shadow-2xl"
-              />
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

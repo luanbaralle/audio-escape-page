@@ -8,7 +8,17 @@ const DriverSection = () => {
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content - mobile first */}
+          {/* Image */}
+          <div className="relative flex items-center justify-center">
+            <div className="absolute w-72 h-72 bg-primary/15 rounded-full blur-[80px]" />
+            <img
+              src={driverImage}
+              alt="Driver Dinâmico de 12mm"
+              className="relative z-10 max-w-md w-full drop-shadow-2xl"
+            />
+          </div>
+
+          {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="text-primary font-semibold uppercase tracking-wider text-sm">
@@ -56,17 +66,6 @@ const DriverSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Image - desktop second */}
-          <div className="relative flex items-center justify-center">
-            <div className="absolute w-72 h-72 bg-primary/15 rounded-full blur-[80px]" />
-            <img
-              src={driverImage}
-              alt="Driver Dinâmico de 12mm"
-              className="relative z-10 max-w-md w-full drop-shadow-2xl"
-            />
-          </div>
-
         </div>
       </div>
     </section>
