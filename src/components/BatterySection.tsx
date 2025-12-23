@@ -9,6 +9,7 @@ const BatterySection = () => {
 
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Content - mobile first */}
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -52,7 +53,7 @@ const BatterySection = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image - desktop second */}
           <div className="relative flex items-center justify-center">
             <div className="absolute w-64 h-64 bg-blue-400/20 rounded-full blur-[60px]" />
             <img
