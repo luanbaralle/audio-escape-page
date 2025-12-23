@@ -29,8 +29,8 @@ const ControlsSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Controls list */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Controls list - mobile first */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:order-1">
             {controls.map((control, index) => (
               <div
                 key={index}
@@ -53,8 +53,8 @@ const ControlsSection = () => {
             ))}
           </div>
 
-          {/* Image */}
-          <div className="relative flex items-center justify-center">
+          {/* Image - desktop second */}
+          <div className="relative flex items-center justify-center lg:order-2">
             <img
               src={controlsImage}
               alt="Controles Touch Intuitivos"

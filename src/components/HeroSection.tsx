@@ -30,8 +30,18 @@ const HeroSection = () => {
 
         {/* Hero content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+          {/* Product image - mobile first, desktop second */}
+          <div className="relative flex items-center justify-center animate-fade-in lg:order-2 order-first">
+            <div className="absolute w-80 h-80 bg-primary/20 rounded-full blur-[80px] animate-pulse-slow" />
+            <img
+              src={heroProduct}
+              alt="Lenovo LE209 Fone de Ouvido Bluetooth"
+              className="relative z-10 max-w-full h-auto animate-float drop-shadow-2xl"
+            />
+          </div>
           {/* Left content */}
-          <div className="space-y-8 animate-slide-up">
+          {/* Left content */}
+          <div className="space-y-8 animate-slide-up lg:order-1">
             <div className="space-y-4">
               <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-primary text-sm font-medium">
                 🔥 Oferta por Tempo Limitado
@@ -90,15 +100,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right - Product image */}
-          <div className="relative flex items-center justify-center animate-fade-in">
-            <div className="absolute w-80 h-80 bg-primary/20 rounded-full blur-[80px] animate-pulse-slow" />
-            <img
-              src={heroProduct}
-              alt="Lenovo LE209 Fone de Ouvido Bluetooth"
-              className="relative z-10 max-w-full h-auto animate-float drop-shadow-2xl"
-            />
-          </div>
         </div>
       </div>
 
